@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Наша история</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="game-locked">
+
+<div class="petals" id="petals"></div>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Г &amp; О</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Меню">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#story">История</a></li>
+      <li><a href="#timeline">Таймлайн</a></li>
+      <li><a href="#events">События</a></li>
+      <li><a href="#trips">Поездки</a></li>
+      <li><a href="#gallery">Фото</a></li>
+      <li id="navVideos" style="display:none"><a href="#videos">Видео</a></li>
+      <li><a href="#quotes">Цитаты</a></li>
+      <li><a href="#stickers">Стикеры</a></li>
+      <li><a href="#profiles">Мы</a></li>
+      <li><a href="#facts">Факты</a></li>
+      <li><a href="#dreams">Мечты</a></li>
+      <li><a href="#letter">Письмо</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+  <div class="hero-content">
+    <p class="hero-kicker">Книга нашей истории</p>
+    <h1 class="hero-names">Глеб <span class="amp">&amp;</span> Ольга</h1>
+    <p class="hero-since">вместе с 23 сентября 2023 года</p>
+
+    <div class="hero-counters" id="heroCounters">
+      <div class="counter-group">
+        <p class="counter-group-label">Мы вместе</p>
+        <div class="counter-row">
+          <div class="counter-box"><span class="counter-num" id="togYears">0</span><span class="counter-label">лет</span></div>
+          <div class="counter-box"><span class="counter-num" id="togDays">0</span><span class="counter-label">дней</span></div>
+          <div class="counter-box"><span class="counter-num" id="togHours">00</span><span class="counter-label">часов</span></div>
+          <div class="counter-box"><span class="counter-num" id="togMin">00</span><span class="counter-label">минут</span></div>
+          <div class="counter-box"><span class="counter-num" id="togSec">00</span><span class="counter-label">секунд</span></div>
+        </div>
+      </div>
+      <div class="counter-group">
+        <p class="counter-group-label">Мы женаты</p>
+        <div class="counter-row">
+          <div class="counter-box"><span class="counter-num" id="wedYears">0</span><span class="counter-label">лет</span></div>
+          <div class="counter-box"><span class="counter-num" id="wedDays">0</span><span class="counter-label">дней</span></div>
+          <div class="counter-box"><span class="counter-num" id="wedHours">00</span><span class="counter-label">часов</span></div>
+          <div class="counter-box"><span class="counter-num" id="wedMin">00</span><span class="counter-label">минут</span></div>
+          <div class="counter-box"><span class="counter-num" id="wedSec">00</span><span class="counter-label">секунд</span></div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="hero-cta" id="heroCta">Открыть нашу историю ↓</button>
+
+    <div class="hero-congrats" id="heroCongrats">
+      <p class="congrats-emoji">💕</p>
+      <p class="congrats-text">Поймала! Как и тогда в Бла бла баре поймала мой взгляд на себе. Профессиональный ловец!
+      Теперь заходи — я тебе кое что расскажу:)</p>
+      <button type="button" class="hero-cta hero-continue" id="heroContinue">Читать дальше →</button>
+    </div>
+  </div>
+  <div class="hero-bg"></div>
+</section>
+
+<!-- INTRO / LETTER -->
+<section id="intro" class="section intro-section">
+  <img class="section-decor pos-tr" src="assets/decor/couple-kiss.png" alt="" aria-hidden="true">
+  <img class="section-decor pos-bl" src="assets/decor/bed-closeup-2.png" alt="" aria-hidden="true">
+  <div class="container narrow">
+    <p class="intro-greeting" id="introGreeting"></p>
+    <div class="intro-text" id="introText"></div>
+  </div>
+</section>
+
+<!-- MEETING -->
+<section id="meeting" class="section alt">
+  <img class="section-decor pos-bl" src="assets/decor/disco-couple.png" alt="" aria-hidden="true">
+  <div class="container narrow">
+    <h2 class="section-title" id="meetingTitle"></h2>
+    <div class="prose" id="meetingText"></div>
+  </div>
+</section>
+
+<!-- STORY / CHAPTERS -->
+<section id="story" class="section">
+  <img class="section-decor pos-br" src="assets/decor/holiday-couple.png" alt="" aria-hidden="true">
+  <div class="container">
+    <p class="eyebrow">Наша история</p>
+    <h2 class="section-title">Год за годом</h2>
+    <p class="section-sub">Нажми на год, чтобы открыть главу целиком.</p>
+    <div class="chapters" id="chapters"></div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline" class="section alt">
+  <img class="section-decor pos-tr" src="assets/decor/mugs.png" alt="" aria-hidden="true">
+  <div class="container">
+    <p class="eyebrow">Хронология</p>
+    <h2 class="section-title">Таймлайн</h2>
+    <p class="section-sub">Нажимай на точки, чтобы узнать, почему это было важно.</p>
+    <div class="timeline" id="timelineWrap"></div>
+  </div>
+</section>
+
+<!-- KEY EVENTS -->
+<section id="events" class="section">
+  <img class="section-decor pos-tr" src="assets/decor/wedding.png" alt="" aria-hidden="true">
+  <div class="container">
+    <p class="eyebrow">Ключевые события</p>
+    <h2 class="section-title">Три момента, с которых всё началось</h2>
+    <div class="events-grid" id="eventsGrid"></div>
+  </div>
+</section>
+
+<!-- TRIPS -->
+<section id="trips" class="section alt">
+  <img class="section-decor pos-tl" src="assets/decor/cat-car.png" alt="" aria-hidden="true">
+  <img class="section-decor pos-br" src="assets/decor/mountain-kiss.png" alt="" aria-hidden="true">
+  <div class="container">
+    <p class="eyebrow">Путешествия</p>
+    <h2 class="section-title">Места, которые нас сблизили</h2>
+    <div class="trips-grid" id="tripsGrid"></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+  <img class="section-decor pos-bl" src="assets/decor/corgi-garden.png" alt="" aria-hidden="true">
+  <div class="container">
+    <p class="eyebrow">Фотографии</p>
+    <h2 class="section-title">Любимые кадры</h2>
+    <p class="section-sub">Нажми на фото, чтобы узнать историю за ним.</p>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos" class="section" style="display:none">
+  <div class="container">
+    <p class="eyebrow">Видео</p>
+    <h2 class="section-title">Живые моменты</h2>
+    <p class="section-sub">Нажми на окошко, чтобы включить звук на весь экран.</p>
+    <div class="video-grid" id="videoGrid"></div>
+  </div>
+</section>
+
+<!-- QUOTES -->
+<section id="quotes" class="section alt">
+  <img class="section-decor pos-tr" src="assets/decor/chocolate.png" alt="" aria-hidden="true">
+  <div class="container">
+    <p class="eyebrow">Лучшие цитаты</p>
+    <h2 class="section-title">Наши слова</h2>
+    <div class="quote-tabs" id="quoteTabs"></div>
+    <div class="quote-cards" id="quoteCards"></div>
+  </div>
+</section>
+
+<!-- STICKERS -->
+<section id="stickers" class="section">
+  <img class="section-decor pos-tl" src="assets/decor/cat-bucket.png" alt="" aria-hidden="true">
+  <img class="section-decor pos-br" src="assets/decor/cat-table.png" alt="" aria-hidden="true">
+  <div class="container">
+    <p class="eyebrow">Стикеры и эмодзи</p>
+    <h2 class="section-title">990 стикеров за три года</h2>
+    <p class="section-sub" id="stickersIntro"></p>
+    <div class="stickers-bars" id="stickersBars"></div>
+    <h3 class="sub-title">Фирменные знаки</h3>
+    <div class="signature-grid" id="signatureGrid"></div>
+  </div>
+</section>
+
+<!-- PROFILES -->
+<section id="profiles" class="section alt">
+  <img class="section-decor pos-tl" src="assets/decor/corgi-dinner.png" alt="" aria-hidden="true">
+  <img class="section-decor pos-br" src="assets/decor/green-jacket.png" alt="" aria-hidden="true">
+  <div class="container">
+    <p class="eyebrow">Кто мы такие</p>
+    <h2 class="section-title">Два профиля</h2>
+    <div class="profiles-grid" id="profilesGrid"></div>
+  </div>
+</section>
+
+<!-- FACTS -->
+<section id="facts" class="section">
+  <img class="section-decor pos-tl" src="assets/decor/cat-bed.png" alt="" aria-hidden="true">
+  <img class="section-decor pos-br" src="assets/decor/corgi.png" alt="" aria-hidden="true">
+  <div class="container">
+    <p class="eyebrow">Мелочи, которые я не хочу забыть</p>
+    <h2 class="section-title">Интересные факты</h2>
+    <div class="facts-grid" id="factsGrid"></div>
+  </div>
+</section>
+
+<!-- DREAMS -->
+<section id="dreams" class="section alt dreams-section">
+  <img class="section-decor pos-tr" src="assets/decor/winter-corgi.png" alt="" aria-hidden="true">
+  <div class="container narrow">
+    <p class="eyebrow">Мечты</p>
+    <h2 class="section-title" id="dreamsTitle"></h2>
+    <div class="prose" id="dreamsText"></div>
+  </div>
+</section>
+
+<!-- FINAL LETTER -->
+<section id="letter" class="section letter-section">
+  <img class="section-decor pos-center-top" src="assets/decor/bed-closeup.png" alt="" aria-hidden="true">
+  <div class="container narrow">
+    <div class="letter-envelope" id="letterEnvelope">
+      <div class="envelope-seal">💌</div>
+      <p class="envelope-label">Нажми, чтобы прочитать</p>
+    </div>
+    <div class="letter-content" id="letterContent">
+      <h2 class="section-title" id="letterTitle"></h2>
+      <div class="prose" id="letterText"></div>
+      <p class="letter-signature" id="letterSignature"></p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Сделано с любовью — для тебя одной.</p>
+</footer>
+
+<!-- PHOTO MODAL -->
+<div class="modal" id="photoModal">
+  <div class="modal-inner">
+    <button class="modal-close" id="modalClose">×</button>
+    <img class="modal-img" id="modalImg" src="" alt="">
+    <div class="modal-text">
+      <p class="modal-date" id="modalDate"></p>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <p class="modal-story" id="modalStory"></p>
+    </div>
+  </div>
+</div>
+
+<!-- VIDEO MODAL -->
+<div class="modal video-modal" id="videoModal">
+  <div class="modal-inner">
+    <button class="modal-close" id="videoModalClose">×</button>
+    <video id="videoModalPlayer" controls playsinline></video>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/special-photos.js"></script>
+<script src="js/videos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
