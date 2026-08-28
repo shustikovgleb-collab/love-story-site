@@ -445,6 +445,7 @@
     $("#letterEnvelope").addEventListener("click", () => {
       $("#letterEnvelope").classList.add("hidden");
       $("#letterContent").classList.add("show");
+      $("#letter").classList.add("open");
     });
   }
 

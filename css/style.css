@@ -47,12 +47,14 @@ p { margin: 0 0 1em 0; }
   position: absolute; z-index: 0; pointer-events: none;
   width: 380px; max-width: 46vw; height: auto;
   opacity: 0.9; filter: saturate(0.92);
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.7s ease;
 }
 .section-decor.pos-br { right: -40px; bottom: -30px; }
 .section-decor.pos-tr { right: -30px; top: -20px; }
 .section-decor.pos-bl { left: -40px; bottom: -30px; }
 .section-decor.pos-tl { left: -30px; top: -20px; }
 .section-decor.pos-center-top { left: 50%; top: -40px; transform: translateX(-50%); width: 460px; }
+.letter-section.open .section-decor.pos-center-top { transform: translateX(calc(-50% + 44vw)); opacity: 0.55; }
 @media (max-width: 720px) {
   .section-decor { width: 220px; opacity: 0.7; }
   .section-decor.pos-center-top { width: 260px; }
